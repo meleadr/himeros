@@ -1,25 +1,25 @@
 {
-  "name": "himeros",
+  "name": "frontend",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/himeros/src",
+  "sourceRoot": "apps/frontend/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/himeros",
-        "browser": "apps/himeros/src/main.ts",
-        "tsConfig": "apps/himeros/tsconfig.app.json",
+        "outputPath": "dist/apps/frontend",
+        "browser": "apps/frontend/src/main.ts",
+        "tsConfig": "apps/frontend/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/himeros/public"
+            "input": "apps/frontend/public"
           }
         ],
-        "styles": ["apps/himeros/src/styles.css"]
+        "styles": ["apps/frontend/src/styles.css"]
       },
       "configurations": {
         "production": {
@@ -50,10 +50,10 @@
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "himeros:build:production"
+          "buildTarget": "frontend:build:production"
         },
         "development": {
-          "buildTarget": "himeros:build:development"
+          "buildTarget": "frontend:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -69,8 +69,8 @@
       "continuous": true,
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "himeros:build",
-        "staticFilePath": "dist/apps/himeros/browser",
+        "buildTarget": "frontend:build",
+        "staticFilePath": "dist/apps/frontend/browser",
         "spa": true
       }
     }
