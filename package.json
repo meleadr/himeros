@@ -8,7 +8,8 @@
     "prisma:seed": "cd apps/backend && npx prisma db seed",
     "prisma:reset:seed": "cd apps/backend && npx prisma migrate reset --force",
     "prisma:generate": "cd apps/backend && npx prisma generate",
-    "prisma:studio": "cd apps/backend && npx prisma studio"
+    "prisma:studio": "cd apps/backend && npx prisma studio",
+    "prettier:fixAll": "prettier . --write"
   },
   "private": true,
   "dependencies": {
