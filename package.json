@@ -2,7 +2,9 @@
   "name": "@himeros/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start:development": "nx run-many --target=serve --projects=frontend,backend --parallel --configuration=development"
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "~21.1.0",
