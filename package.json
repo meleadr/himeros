@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:development": "nx run-many --target=serve --projects=frontend,backend --parallel --configuration=development"
+    "start:development": "nx run-many --target=serve --projects=frontend,backend --parallel --configuration=development",
+    "prisma:migrate": "cd apps/backend && npx prisma migrate dev",
+    "prisma:generate": "cd apps/backend && npx prisma generate",
+    "prisma:studio": "cd apps/backend && npx prisma studio"
   },
   "private": true,
   "dependencies": {
